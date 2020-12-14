@@ -1,0 +1,5 @@
+npm create-react-app ss-react
+npm install react-bootstrap bootstrap
+cd ss-react
+npm add node-sass
+

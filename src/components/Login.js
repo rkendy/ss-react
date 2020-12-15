@@ -38,56 +38,58 @@ export default function Login(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="login-box">
-      <h3>Sistema de Solicitação</h3>
+    <div className="outer">
+      <form onSubmit={handleSubmit} className="login-box">
+        <h3>Sistema de Solicitação</h3>
 
-      {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div className="alert alert-danger">{error}</div>}
 
-      <div className="form-group">
-        <label>Login</label>
-        <input
-          type="text"
-          name="username"
-          className="form-control"
-          placeholder="Digite seu Login"
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <label>Senha</label>
-        <input
-          type="password"
-          name="password"
-          className="form-control"
-          placeholder="Digite sua senha"
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className="form-group">
-        <div className="custom-control custom-checkbox">
+        <div className="form-group">
+          <label>Login</label>
           <input
-            type="checkbox"
-            className="custom-control-input"
-            id="customCheck1"
+            type="text"
+            name="username"
+            className="form-control"
+            placeholder="Digite seu Login"
+            onChange={handleChange}
           />
-          <label className="custom-control-label" htmlFor="customCheck1">
-            Lembre me
-          </label>
         </div>
-      </div>
 
-      <button
-        type="submit"
-        className="btn btn-dark btn-lg btn-block"
-        disabled={!validateForm() || loading}
-      >
-        Login
-      </button>
-      {/* <p className="forgot-password text-right">
+        <div className="form-group">
+          <label>Senha</label>
+          <input
+            type="password"
+            name="password"
+            className="form-control"
+            placeholder="Digite sua senha"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="form-group">
+          <div className="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              className="custom-control-input"
+              id="customCheck1"
+            />
+            <label className="custom-control-label" htmlFor="customCheck1">
+              Lembre me
+            </label>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          className="btn btn-dark btn-lg btn-block"
+          disabled={!validateForm() || loading}
+        >
+          Login
+        </button>
+        {/* <p className="forgot-password text-right">
         Forgot <a href="#">password?</a>
       </p> */}
-    </form>
+      </form>
+    </div>
   );
 }

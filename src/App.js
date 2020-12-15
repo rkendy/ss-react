@@ -28,17 +28,10 @@ function App() {
   return (
     <Router history={history}>
       <div className="App">
-        <div className="outer">
-          <Switch>
-            <Route exact path="/login" component={Login} />
-            <PrivateRoute
-              path="/"
-              authenticated={false}
-              exact
-              component={Home}
-            />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <PrivateRoute path="/" authenticated={true} exact component={Home} />
+        </Switch>
       </div>
     </Router>
   );

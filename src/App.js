@@ -7,6 +7,20 @@ import { createBrowserHistory } from "history";
 import { Container, Row, Col } from "react-bootstrap";
 // import pizzas from './data';
 import Login from "./components/Login";
+import Home from "./components/Home";
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) =>
+      rest.authenticated === true ? (
+        <Component {...props} />
+      ) : (
+        <Redirect to="/login" />
+      )
+    }
+  />
+);
 
 function App() {
   const history = createBrowserHistory();
@@ -15,11 +29,15 @@ function App() {
     <Router history={history}>
       <div className="App">
         <div className="outer">
-          <div className="inner">
-            <Switch>
-              <Route exact path="/" component={Login} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <PrivateRoute
+              path="/"
+              authenticated={false}
+              exact
+              component={Home}
+            />
+          </Switch>
         </div>
       </div>
     </Router>

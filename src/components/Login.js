@@ -38,7 +38,7 @@ export default function Login(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="login-box">
       <h3>Sistema de Solicitação</h3>
 
       {error && <div className="alert alert-danger">{error}</div>}

@@ -4,6 +4,7 @@ import axios from "axios";
 
 import MenuMain from "./MenuMain";
 import TabelaSolicitacoes from "./TabelaSolicitacoes";
+import Solicitacao from "./Solicitacao";
 
 const colunas = ["#", "Solicitante", "Título"];
 const solicitacoes = [
@@ -43,6 +44,14 @@ export default function Home() {
       <Row>
         <Col md={6}>
           <Card className="mb-4">
+            <Card.Header>Nova Solicitação</Card.Header>
+            <Card.Body>
+              <Solicitacao />
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col>
+          <Card className="mb-4">
             <Card.Header bg="primary">Minhas Solicitações</Card.Header>
             <Card.Body>
               <TabelaSolicitacoes
@@ -53,8 +62,6 @@ export default function Home() {
               <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
-        </Col>
-        <Col>
           <Card className="mb-4">
             <Card.Header>Novas Solicitações</Card.Header>
             <Card.Body>

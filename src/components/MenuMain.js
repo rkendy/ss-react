@@ -12,11 +12,11 @@ export default function MenuMain() {
   return (
     <div>
       <Navbar bg="dark" expand="md" className="navbar-dark bg-dark mb-3">
-        <Navbar.Brand href="#home">SS</Navbar.Brand>
+        <Navbar.Brand href="/">SS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Abrir</Nav.Link>
+            <Nav.Link href="solicitacao">Abrir</Nav.Link>
             <Nav.Link href="#home">Consultar</Nav.Link>
             <Nav.Link href="#link">Administrativo</Nav.Link>
             <NavDropdown title="Administrativo" id="basic-nav-dropdown">

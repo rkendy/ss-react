@@ -8,12 +8,10 @@ import {
   Button,
 } from "react-bootstrap";
 
-import MenuFunctions from "./MenuFunctions";
-
 export default function MenuMain() {
   return (
     <div>
-      <Navbar bg="dark" expand="md" className="navbar-dark bg-dark">
+      <Navbar bg="dark" expand="md" className="navbar-dark bg-dark mb-3">
         <Navbar.Brand href="#home">SS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -43,7 +41,6 @@ export default function MenuMain() {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-      <MenuFunctions />
     </div>
   );
 }

@@ -8,13 +8,19 @@ import { Container, Row, Col } from "react-bootstrap";
 // import pizzas from './data';
 import Login from "./components/Login";
 import Home from "./components/Home";
+import MenuMain from "./components/MenuMain";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
       rest.authenticated === true ? (
-        <Component {...props} />
+        <div>
+          <MenuMain />
+          <Container fluid>
+            <Component {...props} />
+          </Container>
+        </div>
       ) : (
         <Redirect to="/login" />
       )

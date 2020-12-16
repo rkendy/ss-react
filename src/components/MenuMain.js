@@ -6,6 +6,8 @@ import {
   Form,
   FormControl,
   Button,
+  OverlayTrigger,
+  Tooltip,
 } from "react-bootstrap";
 
 import { DoorOpen } from "react-bootstrap-icons";
@@ -43,7 +45,13 @@ export default function MenuMain() {
           </Form>
         </Navbar.Collapse>
         <a href="/login">
-          <DoorOpen size={40} color="white" className="ml-3" />
+          <OverlayTrigger
+            key="bottom"
+            placement="bottom"
+            overlay={<Tooltip>Sair do Sistema</Tooltip>}
+          >
+            <DoorOpen size={40} color="white" className="ml-3" />
+          </OverlayTrigger>
         </a>
       </Navbar>
     </div>

@@ -8,6 +8,8 @@ import {
   Button,
 } from "react-bootstrap";
 
+import { DoorOpen } from "react-bootstrap-icons";
+
 export default function MenuMain() {
   return (
     <div>
@@ -40,6 +42,9 @@ export default function MenuMain() {
             <Button variant="outline-success">Consulta</Button>
           </Form>
         </Navbar.Collapse>
+        <a href="/login">
+          <DoorOpen size={40} color="white" className="ml-3" />
+        </a>
       </Navbar>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { ClipboardCheck } from "react-bootstrap-icons";
 
 import useForm from "./useForm";
 
@@ -40,7 +41,10 @@ export default function Login(props) {
   return (
     <div className="outer">
       <form onSubmit={handleSubmit} className="login-box">
-        <h3>Sistema de Solicitação</h3>
+        <div style={{ textAlign: "center" }}>
+          <ClipboardCheck size={46} className="mb-3" />
+        </div>
+        <h3>Sistema SS</h3>
 
         {error && <div className="alert alert-danger">{error}</div>}
 

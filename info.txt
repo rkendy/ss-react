@@ -3,5 +3,6 @@ npm install react-bootstrap bootstrap
 cd ss-react
 npm install react-router-dom
 npm install axios
+npm install react-bootstrap-icons
 
 

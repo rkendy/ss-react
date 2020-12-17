@@ -29,8 +29,6 @@ export default function Solicitacao({ solicitacao }) {
           </Button>
         </Card.Body>
       </Card>
-
-      <Acompanhamento />
     </div>
   );
 }

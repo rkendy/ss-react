@@ -39,14 +39,6 @@ const solicitacoes = [
   },
 ];
 
-const solicitacao = {
-  id: 23231,
-  titulo: "Problema com servidor de banco de dados",
-  descricao: "O servidor de endereco x.y.z.k que hospeda o bd etc ...",
-  setor: "Informatica",
-  status: "Execução",
-};
-
 export default function Home() {
   return (
     <div>
@@ -58,7 +50,6 @@ export default function Home() {
               <NovaSolicitacao />
             </Card.Body>
           </Card>
-          <Solicitacao solicitacao={solicitacao} />
         </Col>
         <Col>
           <Card className="mb-4">

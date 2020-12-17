@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import MenuMain from "./components/MenuMain";
 import NovaSolicitacao from "./components/NovaSolicitacao";
+import Acompanhamento from "./components/Acompanhamento";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -43,6 +44,12 @@ function App() {
             authenticated={true}
             exact
             component={NovaSolicitacao}
+          />
+          <PrivateRoute
+            path="/solicitacao/*"
+            authenticated={true}
+            exact
+            component={Acompanhamento}
           />
         </Switch>
       </div>

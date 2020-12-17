@@ -10,7 +10,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 
-import { DoorOpen } from "react-bootstrap-icons";
+import { Power } from "react-bootstrap-icons";
 
 export default function MenuMain() {
   return (
@@ -50,7 +50,7 @@ export default function MenuMain() {
             placement="bottom"
             overlay={<Tooltip>Sair do Sistema</Tooltip>}
           >
-            <DoorOpen size={40} color="white" className="ml-3" />
+            <Power size={34} color="white" className="ml-3" />
           </OverlayTrigger>
         </a>
       </Navbar>

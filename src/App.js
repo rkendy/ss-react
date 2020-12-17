@@ -9,7 +9,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import MenuMain from "./components/MenuMain";
-import Solicitacao from "./components/Solicitacao";
+import NovaSolicitacao from "./components/NovaSolicitacao";
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -42,7 +42,7 @@ function App() {
             path="/solicitacao"
             authenticated={true}
             exact
-            component={Solicitacao}
+            component={NovaSolicitacao}
           />
         </Switch>
       </div>

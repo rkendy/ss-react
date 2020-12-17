@@ -4,6 +4,7 @@ import axios from "axios";
 
 import MenuMain from "./MenuMain";
 import TabelaSolicitacoes from "./TabelaSolicitacoes";
+import NovaSolicitacao from "./NovaSolicitacao";
 import Solicitacao from "./Solicitacao";
 
 const colunas = ["#", "Solicitante", "Título"];
@@ -38,6 +39,14 @@ const solicitacoes = [
   },
 ];
 
+const solicitacao = {
+  id: 23231,
+  titulo: "Problema com servidor de banco de dados",
+  descricao: "O servidor de endereco x.y.z.k que hospeda o bd etc ...",
+  setor: "Informatica",
+  status: "Execução",
+};
+
 export default function Home() {
   return (
     <div>
@@ -46,9 +55,10 @@ export default function Home() {
           <Card className="mb-4">
             <Card.Header>Nova Solicitação</Card.Header>
             <Card.Body>
-              <Solicitacao />
+              <NovaSolicitacao />
             </Card.Body>
           </Card>
+          <Solicitacao solicitacao={solicitacao} />
         </Col>
         <Col>
           <Card className="mb-4">

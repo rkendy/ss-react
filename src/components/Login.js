@@ -89,6 +89,14 @@ export default function Login(props) {
           disabled={!validateForm() || loading}
         >
           Login
+          <div
+            id="spinner"
+            class="spinner-border spinner-border-sm mb-1 ml-2"
+            role="status"
+            style={{ display: loading ? "" : "none" }}
+          >
+            <span class="sr-only">Loading...</span>
+          </div>
         </button>
         {/* <p className="forgot-password text-right">
         Forgot <a href="#">password?</a>

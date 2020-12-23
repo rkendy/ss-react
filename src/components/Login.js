@@ -27,8 +27,8 @@ export default function Login(props) {
         props.history.push("/");
       })
       .catch((error) => {
+        console.log("Erro: " + error);
         setError("Erro Autenticação");
-        console.log(error.response);
         setLoading(false);
       })
       .finally(() => {});
